@@ -1,44 +1,9 @@
-let cart=[];
+function order(product){
 
+let message = "Hello, I want to order " + product;
 
-function addToCart(item){
+let url = "https://wa.me/923308480097?text=" + encodeURIComponent(message);
 
-cart.push(item);
-
-document.getElementById("cart-count").innerHTML=cart.length;
-
-alert(item+" added to cart!");
-
-}
-
-
-
-function openCart(){
-
-document.getElementById("cart").style.display="block";
-
-
-let list=document.getElementById("cart-items");
-
-list.innerHTML="";
-
-
-cart.forEach(product=>{
-
-let li=document.createElement("li");
-
-li.innerHTML=product;
-
-list.appendChild(li);
-
-});
-
-}
-
-
-
-function closeCart(){
-
-document.getElementById("cart").style.display="none";
+window.open(url);
 
 }
