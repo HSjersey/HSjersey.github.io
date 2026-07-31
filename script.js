@@ -1,36 +1,44 @@
-let cart = [];
+let cart=[];
 
-function addToCart(product){
 
-    cart.push(product);
+function addToCart(item){
 
-    document.getElementById("cart-count").innerHTML = cart.length;
+cart.push(item);
 
-    alert(product + " added to cart!");
+document.getElementById("cart-count").innerHTML=cart.length;
+
+alert(item+" added to cart!");
+
 }
+
 
 
 function openCart(){
 
-    document.getElementById("cart").style.display="block";
+document.getElementById("cart").style.display="block";
 
-    let list = document.getElementById("cart-items");
 
-    list.innerHTML="";
+let list=document.getElementById("cart-items");
 
-    cart.forEach(item=>{
+list.innerHTML="";
 
-        let li=document.createElement("li");
-        li.innerHTML=item;
-        list.appendChild(li);
 
-    });
+cart.forEach(product=>{
+
+let li=document.createElement("li");
+
+li.innerHTML=product;
+
+list.appendChild(li);
+
+});
 
 }
 
 
+
 function closeCart(){
 
-    document.getElementById("cart").style.display="none";
+document.getElementById("cart").style.display="none";
 
 }
