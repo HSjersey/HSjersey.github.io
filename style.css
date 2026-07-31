@@ -251,6 +251,17 @@ nav{
 
 .card img{
     height:260px;
+
+    .hidden{
+    opacity:0;
+    transform:translateY(30px);
+    transition:0.6s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
 }
 
 }
