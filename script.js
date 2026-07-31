@@ -53,7 +53,7 @@ document.querySelectorAll(".order-btn").forEach(button => {
             this.closest(".card").querySelector("h3").innerText;
 
         // Replace with your WhatsApp number
-        const phone = "923001234567";
+        const phone = "923308480097";
 
         const message =
 `Hello H's Football Jerseys!
