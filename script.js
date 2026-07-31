@@ -1,103 +1,36 @@
-// ===============================
-// H's Football Jerseys Script
-// ===============================
+let cart = [];
 
-// Live Search
-const searchInput = document.getElementById("search");
-const cards = document.querySelectorAll(".card");
+function addToCart(product){
 
-if (searchInput) {
-    searchInput.addEventListener("keyup", function () {
-        const value = this.value.toLowerCase();
+    cart.push(product);
 
-        cards.forEach(card => {
-            const text = card.innerText.toLowerCase();
+    document.getElementById("cart-count").innerHTML = cart.length;
 
-            if (text.includes(value)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    });
+    alert(product + " added to cart!");
 }
 
-// Category Filter
-function filterProducts(category) {
 
-    cards.forEach(card => {
+function openCart(){
 
-        if (category === "all") {
-            card.style.display = "block";
-            return;
-        }
+    document.getElementById("cart").style.display="block";
 
-        if (card.dataset.category === category) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
+    let list = document.getElementById("cart-items");
+
+    list.innerHTML="";
+
+    cart.forEach(item=>{
+
+        let li=document.createElement("li");
+        li.innerHTML=item;
+        list.appendChild(li);
 
     });
 
 }
 
-// WhatsApp Order Button
-document.querySelectorAll(".order-btn").forEach(button => {
 
-    button.addEventListener("click", function (e) {
+function closeCart(){
 
-        e.preventDefault();
+    document.getElementById("cart").style.display="none";
 
-        const jersey =
-            this.closest(".card").querySelector("h3").innerText;
-
-        // Replace with your WhatsApp number
-        const phone = "923308480097";
-
-        const message =
-`Hello H's Football Jerseys!
-
-I would like to order:
-
-${jersey}
-
-Please send me the details.`;
-
-        window.open(
-            `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
-            "_blank"
-        );
-
-    });
-
-});
-
-// Smooth Fade Animation
-const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-
-    });
-
-});
-
-document.querySelectorAll(".card").forEach(card => {
-    card.classList.add("hidden");
-    observer.observe(card);
-});
-
-.hidden{
-    opacity:0;
-    transform:translateY(30px);
-    transition:0.6s;
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0);
 }
