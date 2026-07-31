@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,29 +12,34 @@
 
 </head>
 
+
 <body>
 
+
 <header>
+
 <h1>⚽ H's Football Jerseys 👕</h1>
+
 <p>Wear Your Passion • Represent Your Team</p>
+
 </header>
 
 
+
 <nav>
+
 <a href="#products">Jerseys</a>
 <a href="#about">About</a>
-<a href="#contact">Contact</a>
-
-<button onclick="openCart()">
-🛒 Cart (<span id="cart-count">0</span>)
-</button>
+<a href="#contact">Order</a>
 
 </nav>
 
 
+
+
 <section class="hero">
 
-<h2>Premium Football Jerseys 🔥</h2>
+<h2>🔥 Premium Football Jerseys</h2>
 
 <p>
 Club Jerseys • National Teams • Custom Designs
@@ -42,104 +49,92 @@ Club Jerseys • National Teams • Custom Designs
 
 
 
+
+
 <section id="products">
 
-<h2>🔥 Latest Jerseys 👕</h2>
+<h2>👕 Available Jerseys</h2>
 
 
 <div class="products">
 
 
+
 <div class="card">
-<img src="images/barca.jpg">
+<img src="images/barca.png">
 <h3>Barcelona 26/27 Jersey 🔵🔴</h3>
-<p>Rs. 2500</p>
-<button onclick="addToCart('Barcelona 26/27 Jersey')">
-Add Cart
-</button>
+<button onclick="order('Barcelona 26/27 Jersey')">Order Now</button>
 </div>
 
 
 
 <div class="card">
-<img src="images/madrid.jpg">
+<img src="images/madrid.png">
 <h3>Real Madrid 26/27 Jersey ⚪</h3>
-<p>Rs. 2500</p>
-<button onclick="addToCart('Real Madrid 26/27 Jersey')">
-Add Cart
-</button>
+<button onclick="order('Real Madrid 26/27 Jersey')">Order Now</button>
 </div>
 
 
 
+
 <div class="card">
-<img src="images/argentina.jpg">
+<img src="images/argentina.png">
 <h3>Argentina 2026 Jersey 🇦🇷</h3>
-<p>Rs. 2500</p>
-<button onclick="addToCart('Argentina 2026 Jersey')">
-Add Cart
-</button>
+<button onclick="order('Argentina 2026 Jersey')">Order Now</button>
 </div>
 
 
 
+
 <div class="card">
-<img src="images/brazil.jpg">
+<img src="images/brazil.png">
 <h3>Brazil Jersey 🇧🇷</h3>
-<p>Rs. 2500</p>
-<button onclick="addToCart('Brazil Jersey')">
-Add Cart
-</button>
+<button onclick="order('Brazil Jersey')">Order Now</button>
 </div>
 
 
 
+
 <div class="card">
-<img src="images/manchester.jpg">
+<img src="images/manchester.png">
 <h3>Manchester United Jersey 🔴</h3>
-<p>Rs. 2500</p>
-<button onclick="addToCart('Manchester United Jersey')">
-Add Cart
-</button>
+<button onclick="order('Manchester United Jersey')">Order Now</button>
 </div>
 
 
 
+
 <div class="card">
-<img src="images/chelsea.jpg">
+<img src="images/chelsea.png">
 <h3>Chelsea Jersey 🔵</h3>
-<p>Rs. 2500</p>
-<button onclick="addToCart('Chelsea Jersey')">
-Add Cart
-</button>
+<button onclick="order('Chelsea Jersey')">Order Now</button>
 </div>
 
 
 
+
 <div class="card">
-<img src="images/france.jpg">
+<img src="images/france.png">
 <h3>France Jersey 🇫🇷</h3>
-<p>Rs. 2500</p>
-<button onclick="addToCart('France Jersey')">
-Add Cart
-</button>
+<button onclick="order('France Jersey')">Order Now</button>
 </div>
+
 
 
 
 <div class="card">
-<img src="images/portugal.jpg">
+<img src="images/portugal.png">
 <h3>Portugal Jersey 🇵🇹</h3>
-<p>Rs. 2500</p>
-<button onclick="addToCart('Portugal Jersey')">
-Add Cart
-</button>
+<button onclick="order('Portugal Jersey')">Order Now</button>
 </div>
+
 
 
 </div>
 
 </section>
+
+
 
 
 
@@ -161,45 +156,43 @@ jerseys with your own name and number.
 
 
 
+
+
 <section id="contact">
 
-<h2>Contact 📩</h2>
+<h2>📩 Order Your Jersey</h2>
 
 <p>
-Order your jersey today!
+For orders and custom jerseys, contact us on WhatsApp:
 </p>
 
-<a class="whatsapp">
+<h3>📱 +92 330 8480097</h3>
+
+
+<a class="whatsapp" href="https://wa.me/923308480097">
 WhatsApp Order
 </a>
+
 
 </section>
 
 
 
-<div id="cart">
-
-<h2>🛒 Your Cart</h2>
-
-<ul id="cart-items"></ul>
-
-<button onclick="closeCart()">
-Close
-</button>
-
-</div>
-
 
 
 <footer>
 
+<p>
 © 2026 H's Football Jerseys ⚽
+</p>
 
 </footer>
+
 
 
 <script src="script.js"></script>
 
 
 </body>
+
 </html>
