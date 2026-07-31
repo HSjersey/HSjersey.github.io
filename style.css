@@ -1,129 +1,187 @@
-body{
-
-margin:0;
-font-family:Arial;
-background:#f4f4f4;
-color:#222;
-
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
 }
 
 
-header{
-
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-
+/* Top Banner */
+header {
+    background: linear-gradient(135deg, #111827, #1e40af, #16a34a);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+    border-bottom: 5px solid #facc15;
 }
 
 
-nav{
-
-background:#222;
-padding:15px;
-text-align:center;
-
+header h1 {
+    font-size: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
 }
 
 
-nav a, nav button{
-
-color:white;
-margin:10px;
-background:none;
-border:none;
-font-size:16px;
-
+header p {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #facc15;
 }
 
 
-.hero{
-
-text-align:center;
-padding:40px;
-background:white;
-
+/* Navigation */
+nav {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 
-
-.products{
-
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:20px;
-
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 
-
-.card{
-
-background:white;
-width:250px;
-padding:20px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 0 10px #ccc;
-
+nav a:hover {
+    color: #facc15;
 }
 
 
-
-.card img{
-
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:10px;
-
+/* Hero Section */
+.hero {
+    background: white;
+    text-align: center;
+    padding: 45px;
 }
 
 
-
-button{
-
-background:green;
-color:white;
-padding:10px;
-border-radius:8px;
-cursor:pointer;
-
+.hero h2 {
+    font-size: 35px;
 }
 
 
-
-section{
-
-padding:30px;
-text-align:center;
-
+/* Products */
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 
-
-#cart{
-
-display:none;
-position:fixed;
-right:20px;
-top:20px;
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 0 20px gray;
-
+.card {
+    background: white;
+    width: 260px;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 15px #ccc;
+    transition: 0.3s;
 }
 
 
+.card:hover {
+    transform: translateY(-8px);
+}
 
-footer{
 
-background:#111;
-color:white;
-padding:15px;
-text-align:center;
+.card img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background: white;
+    border-radius: 12px;
+}
+
+
+.card h3 {
+    font-size: 20px;
+}
+
+
+button {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+button:hover {
+    background: #15803d;
+}
+
+
+/* Sections */
+section {
+    padding: 35px;
+    text-align: center;
+}
+
+
+section h2 {
+    font-size: 30px;
+}
+
+
+/* WhatsApp Button */
+.whatsapp {
+    display: inline-block;
+    background: #16a34a;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.whatsapp:hover {
+    background: #15803d;
+}
+
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Mobile Design */
+@media(max-width:600px){
+
+header h1 {
+    font-size: 32px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+.card {
+    width: 90%;
+}
+
+
+nav a {
+    display: inline-block;
+    margin: 8px;
+}
 
 }
